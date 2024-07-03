@@ -6,7 +6,7 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
-<body>
+<body>  
     <nav>
         <ul>
             <li><a href="{{ url_for('index') }}">Home</a></li>
@@ -18,5 +18,7 @@
     <div class="content">
         {% block content %}{% endblock %}
     </div>
+
+    <div class="footer">Portfolio page by Maciej Fularz &copy; {{ now.year }}</div>
 </body>
 </html>
