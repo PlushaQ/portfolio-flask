@@ -1,12 +1,19 @@
 from flask import Flask, render_template
 from datetime import datetime
-from database import db, Project, Photo
+from database.database import db, Project, Photo  # Import the database and models
 
 app = Flask(__name__)
 
+# Configuration for the SQLAlchemy database URI
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///portfolio.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+# Initialize the database with the app
+db.init_app(app)
+
 @app.context_processor
 def inject_now():
-    return {'now': datetime.now()}
+    return {'now': datetime.utcnow()}
 
 @app.route('/')
 def index():
@@ -27,4 +34,6 @@ def projects():
     return render_template('projects.html', projects=projects)
 
 if __name__ == '__main__':
+    with app.app_context():
+        db.create_all()  # Ensure tables are created before starting the app
     app.run(debug=True)

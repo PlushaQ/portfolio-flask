@@ -1,16 +1,7 @@
-from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
-# Initialize the Flask application
-app = Flask(__name__)
-
-# Configuration for the SQLAlchemy database URI
-# Replace 'sqlite:///portfolio.db' with your database URI
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///portfolio.db'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
-# Initialize the database
-db = SQLAlchemy(app)
+# Initialize the database without an app context
+db = SQLAlchemy()
 
 # Define the Project model
 class Project(db.Model):
@@ -31,7 +22,3 @@ class Photo(db.Model):
 
     def __repr__(self):
         return f'<Photo {self.path}>'
-
-# Create the database and tables
-with app.app_context():
-    db.create_all()
