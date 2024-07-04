@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.context_processor
 def inject_now():
-    return {'now': datetime.utcnow()}
+    return {'now': datetime.now()}
 
 
 @app.route('/')
