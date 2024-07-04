@@ -23,6 +23,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    margin: 0;
 }
 
 nav ul li {
@@ -64,7 +65,26 @@ h1 {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: absolute;
     width: 100%;
+    position: relative;
     bottom: 0;
+    margin-top: auto;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.photos img {
+    max-width: 100px; 
+    height: auto;
 }
