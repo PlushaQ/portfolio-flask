@@ -1,6 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Resume</h1>
-<p>Here is my resume.</p>
+    <h1>Resume</h1>
+    <p>Here is my resume.</p>
+    <button id="fetchButton">Fetch Resume</button>
+    <div id="download" class="download">
+        <div class="download-content">
+            <span class="close">&times;</span>
+            <button id="downloadButton">Download Resume</button>
+        </div>
+    </div>
+{% endblock %}
+{% block script %}
+<script src="{{ url_for('static', filename='javascript/resume.js') }}"></script>
 {% endblock %}
