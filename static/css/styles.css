@@ -48,19 +48,17 @@ nav ul li a:hover {
     color: #feb47b;
 }
 
-/* Hero section styles */
-.hero {
+/* Portfolio section styles */
+.portfolio {
     display: flex;
     justify-content: center;
     align-items: center;
     height: calc(100vh - 60px); /* Subtracting the height of the footer */
     text-align: center;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.5);
-    padding-top: 60px; /* Adjust this value if the navbar height changes */
+    padding-top: 60px;
 }
 
-.hero-content {
+.portfolio-content {
     max-width: 600px;
     padding: 40px;
     background: rgba(255, 255, 255, 0.2);

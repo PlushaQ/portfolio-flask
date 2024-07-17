@@ -1,23 +1,26 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="portfolio-section">
-    <img src="{{ url_for('static', filename='photo1.jpg') }} alt="Maciej Fularz" style="border-radius: 50%; width: 100px; height: 100px; float: left; margin-right: 20px;">
-    <div>
-        <p>Hi, I'm <strong>Maciej Fularz</strong></p>
-        <p>My programming journey started roughly 2 years ago. It all started with some interest in Python. This language made me learn fundamentals of programming and helped developing understanding of algorithms and data structures. <p>
-        <p>After gaining confidence with Python I moved to SQL. It helped me to understand databases management and this technology opens me door to create apps that can store data.</p>
-        <p>Having good grasp in technologies mentioned above I started to learn HMTL and CSS. Diving into Web Development was very exciting. I wanted more of it. And here comes Javascript.<p>
-        <p>Currently, I'm still learning. My main attention is now Django for back-end development and React for front-end development. With these frameworks I can easly keep my excitement to web developing.</p>
-        <p>My latest project (still in developement) is place where I try a lot of diffrent parts of Django and React to learn even more. It uses Django Rest Framework for API and React with Mui for front-end.</p>
-        <p>I won't stop learning there. It's only beginning of my journey and there's a lot more to learn and I can't wait to discover a lot of new things.</p>
-    </div>
-    
-    
-    <div class="buttons">
-        <a href="{{ url_for('resume') }}" class="btn">View Resume</a>
-        <a href="{{ url_for('projects') }}" class="btn">My Projects</a>
-        <a href="{{ url_for('resume') }}" class="btn">Contact Me</a>
+<div class="portfolio">
+    <div class="portfolio-section">
+        <img src="{{ url_for('static', filename='photo1.jpg') }} alt="Maciej Fularz" 
+        style="border-radius: 50%; width: 100px; height: 100px; float: left; margin-right: 20px;">
+        <div>
+            <p>Hi, I'm <strong>Maciej Fularz</strong></p>
+            <p>My programming journey started roughly 2 years ago. It all started with some interest in Python. This language made me learn fundamentals of programming and helped developing understanding of algorithms and data structures. <p>
+            <p>After gaining confidence with Python I moved to SQL. It helped me to understand databases management and this technology opens me door to create apps that can store data.</p>
+            <p>Having good grasp in technologies mentioned above I started to learn HMTL and CSS. Diving into Web Development was very exciting. I wanted more of it. And here comes Javascript.<p>
+            <p>Currently, I'm still learning. My main attention is now Django for back-end development and React for front-end development. With these frameworks I can easly keep my excitement to web developing.</p>
+            <p>My latest project (still in developement) is place where I try a lot of diffrent parts of Django and React to learn even more. It uses Django Rest Framework for API and React with Mui for front-end.</p>
+            <p>I won't stop learning there. It's only beginning of my journey and there's a lot more to learn and I can't wait to discover a lot of new things.</p>
+        </div>
+        
+        
+        <div class="buttons">
+            <a href="{{ url_for('resume') }}" class="btn">View Resume</a>
+            <a href="{{ url_for('projects') }}" class="btn">My Projects</a>
+            <a href="{{ url_for('socials') }}" class="btn">Contact Me</a>
+        </div>
     </div>
 </div>
 {% endblock %}
