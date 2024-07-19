@@ -53,7 +53,6 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 60px); /* Subtracting the height of the footer */
     text-align: center;
     padding-top: 60px;
 }
